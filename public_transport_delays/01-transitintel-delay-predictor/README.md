@@ -1,20 +1,12 @@
-<<<<<<< HEAD
-# Srchr
-
-AI-powered system design generator for developers.
-
-## Prerequisites
-- Node.js
-- Docker & Docker Compose
-
-## Quick Start
-1. Install dependencies: `npm install`
-2. Start infrastructure: `docker-compose up -d`
-3. Start development server: `npm run dev`
-=======
 # 🚆 TransitIntel — Public Transport Delay Predictor
 
 A full-stack machine learning web application that predicts public transport delays using weather conditions, city events, traffic congestion, and temporal data. Built with XGBoost and deployed via Flask with interactive Plotly dashboards.
+
+---
+
+## 🌐 Live Demo
+
+> Run locally at `http://127.0.0.1:5000` after setup
 
 ---
 
@@ -116,7 +108,7 @@ transitintel/
 
 **1. Clone the repository**
 ```bash
-git clone https://github.com/Titankunal/All-Projects.git
+git clone https://github.com/Titankunal/data-science-portfolio.git
 cd public_transport_delays
 ```
 
@@ -190,4 +182,3 @@ Visit `http://127.0.0.1:5000`
 MIT License — feel free to use and adapt for your own projects.
 
 ---
->>>>>>> 042378fdeb1b6bc43c397e5bf59ee94dbfbe7e0c
