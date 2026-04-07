@@ -1,191 +1,52 @@
-# Srchr
+# Data Science & AI Portfolio — Kunal Bisht
 
-AI-powered system design generator for developers.
+AI Engineer working at the intersection of Japanese NLP, LLM systems, and backend engineering. This portfolio spans production ML deployments, Japanese business intelligence tooling, and data science projects.
 
-## Prerequisites
-- Node.js
-- Docker & Docker Compose
-
-## Quick Start
-1. Install dependencies: `npm install`
-2. Start infrastructure: `docker-compose up -d`
-3. Start development server: `npm run dev`
-=======
-# 🚆 TransitIntel — Public Transport Delay Predictor
-
-A full-stack machine learning web application that predicts public transport delays using weather conditions, city events, traffic congestion, and temporal data. Built with XGBoost and deployed via Flask with interactive Plotly dashboards.
+**github.com/Titankunal** · [LinkedIn](https://linkedin.com/in/kunalhere) · [Transcript-ai Live Demo →](https://transcript-ai-qkuqcld42yym54zxmyhhby.streamlit.app/)
 
 ---
 
-## 📸 Screenshots
+## Projects
 
-| Home | Live Predictor | Analytics | Model Insights |
-|------|---------------|-----------|----------------|
-| Hero section with stats | Real-time delay prediction | Interactive Plotly charts | Feature importance & confusion matrix |
+### [TransitIntel — Public Transport Delay Predictor](./public_transport_delays/01-transitintel-delay-predictor/)
+`Python` `XGBoost` `Flask` `Plotly` `Pandas` `scikit-learn` `Bootstrap 5`
 
----
+End-to-end ML pipeline: raw CSV → feature engineering → trained model → Flask REST API → interactive web app.
 
-## 🎯 Project Overview
-
-**Problem:** Public transport delays are unpredictable and cost commuters time and productivity.
-
-**Solution:** A machine learning system that predicts whether a trip will be delayed based on real-time conditions including weather, events, congestion, and time of day.
-
-**Impact:** Helps commuters plan smarter and demonstrates end-to-end data science skills across data engineering, modeling, and full-stack deployment.
-
----
-
-## ✨ Features
-
-- 🔮 **Live Delay Prediction** — Input current conditions and get instant delay probability
-- 📊 **Visual Analytics** — Interactive charts showing delay patterns by route, weather, season, and hour
-- 🔍 **Model Insights** — Feature importance visualization and confusion matrix with plain English explanations
-- 🏗️ **Full Pipeline** — From raw CSV to trained model to deployed web app
-
----
-
-## 🛠️ Tech Stack
-
-| Layer | Technology |
-|-------|-----------|
-| Data Processing | Python, Pandas, NumPy |
-| Machine Learning | XGBoost, Scikit-learn |
-| Web Framework | Flask |
-| Visualizations | Plotly |
-| Frontend | Bootstrap 5, HTML/CSS/JS |
-
----
-
-## 📊 Dataset
-
-- **Source:** Kaggle — Public Transport Delays Dataset
-- **Size:** 2,000 records, 24 features
-- **Target:** `delayed` (binary: 0 = On Time, 1 = Delayed)
-- **Features include:** transport type, route, weather condition, temperature, humidity, wind speed, precipitation, traffic congestion index, events, season, peak hour, holiday flag
-
----
-
-## 🤖 Model Performance
-
-| Metric | Score |
-|--------|-------|
+| Metric | Result |
+|--------|--------|
 | Accuracy | 74% |
-| Delayed Recall | 98% |
-| Algorithm | XGBoost Classifier |
-| Class Imbalance Handling | scale_pos_weight=3 |
+| Delayed class recall | **98%** |
+| Class imbalance handling | `scale_pos_weight=3` |
+| Dashboards | 4 interactive Plotly charts |
 
-**Top Predictive Features:**
-- Route ID
-- Event type (Sports, Parade)
-- Weather condition (Cloudy, Storm)
-- Traffic congestion index
+**Key decisions:** Used `scale_pos_weight` to address severe class imbalance (delayed trips are the minority but the highest-cost miss). Top predictive features: route ID, event type (sports, parade), weather condition, traffic congestion index.
 
 ---
 
-## 📁 Project Structure
-```
-transitintel/
-├── data/
-│   ├── public_transport_delays.csv    # Raw dataset
-│   └── processed_data.csv             # Engineered features
-├── models/
-│   └── xgboost_model.pkl              # Trained model
-├── templates/
-│   ├── base.html                      # Base layout
-│   ├── index.html                     # Homepage
-│   ├── predict.html                   # Live predictor
-│   ├── analytics.html                 # Charts dashboard
-│   └── insights.html                  # Model insights
-├── data_pipeline.py                   # Data loading & cleaning
-├── feature_engineering.py            # Feature creation
-├── model_training.py                 # Model training & evaluation
-├── app.py                            # Flask application
-└── README.md
-```
+## Skills
+
+| Domain | Technologies |
+|--------|-------------|
+| Machine Learning | XGBoost, scikit-learn, Pandas, NumPy, feature engineering, class imbalance handling |
+| Data Visualization | Plotly, Power BI, Matplotlib |
+| Backend / APIs | Python, Flask, FastAPI, Node.js, REST API design |
+| Databases | MongoDB, PostgreSQL, SQL |
+| Tools | Docker, GitHub Actions, Jupyter, Google Colab |
+
+**Also see:** [Transcript-ai](https://github.com/Titankunal/Transcript-ai) — production Japanese NLP system (MeCab morphological analysis, APPI-compliant PII masking, LLM orchestration, 22%→85% evaluation accuracy).
 
 ---
 
-## 💻 Installation & Setup
+## Education & Certifications
 
-### Prerequisites
-- Python 3.8+
-- pip
+**Post Graduate Program — Data Science & Business Analytics**
+Simply Learn · 2024–2025
+Python for ML, Power BI, model building (Linear Regression, Random Forest, XGBoost), data cleaning, prompt engineering
 
-### Steps
-
-**1. Clone the repository**
-```bash
-git clone https://github.com/Titankunal/All-Projects.git
-cd public_transport_delays
-```
-
-**2. Install dependencies**
-```bash
-pip install pandas numpy scikit-learn xgboost flask plotly joblib
-```
-
-**3. Run the data pipeline**
-```bash
-python data_pipeline.py
-```
-
-**4. Engineer features**
-```bash
-python feature_engineering.py
-```
-
-**5. Train the model**
-```bash
-python model_training.py
-```
-
-**6. Launch the app**
-```bash
-python app.py
-```
-
-Visit `http://127.0.0.1:5000`
+**B.Tech — Computer Science & Engineering**
+NPSEI, Pithoragarh · 2021–2025
 
 ---
 
-## 🚀 Usage
-
-### Live Prediction
-1. Navigate to **Live Prediction** in the navbar
-2. Select transport type, route, weather condition and season
-3. Set time, congestion, and event parameters
-4. Click **Predict** to get instant delay probability
-
-### Analytics Dashboard
-- View delay patterns broken down by transport type, weather, season, and hour of day
-- All charts are interactive — hover, zoom, and filter
-
-### Model Insights
-- See which features drive delays the most
-- Understand model performance via confusion matrix
-
----
-
-## 🔮 Future Improvements
-
-- [ ] Integrate real-time weather API (OpenWeatherMap)
-- [ ] Add LSTM time-series model for sequential predictions
-- [ ] Deploy on cloud platform (AWS / GCP / Render)
-- [ ] Add user authentication and saved prediction history
-- [ ] Expand dataset with real city transit data
-
----
-
-## 👤 Author
-
-**Kunal**
-- GitHub: [Titankunal](https://github.com/Titankunal)
-- LinkedIn: [Kunal](https://www.linkedin.com/in/kunalhere/)
-
----
-
-## 📝 License
-
-MIT License — feel free to use and adapt for your own projects.
-
----
+*Kunal Bisht · Kunalbisht909@gmail.com · Open to relocation*
