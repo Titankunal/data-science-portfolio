@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Srchr
 
 AI-powered system design generator for developers.
@@ -190,4 +189,3 @@ Visit `http://127.0.0.1:5000`
 MIT License — feel free to use and adapt for your own projects.
 
 ---
->>>>>>> 042378fdeb1b6bc43c397e5bf59ee94dbfbe7e0c
